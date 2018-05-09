@@ -1,0 +1,200 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
+.md.with-panel-left-cover .panel-cover, .md.with-panel-right-cover .panel-cover{
+	box-shadow: 0 0 20px #ffffff;
+}
+
+.block-button-profil {
+    margin: 30px 0px 0px 15px;
+    width: 90%;
+}
+
+.block-button-profil .button{
+	margin-top: 15px;
+	 
+}
+
+.block-button-menu {
+    margin: 30px 0px 0px 15px;
+    width: 90%;
+}
+
+.block-button-menu .button{
+	margin-top: 15px;
+	 
+}
+
+ 
+
+ .sheet-open {
+ 	background-color:  #2F3545;
+ }
+
+ 
+ .popup .block-content   li {
+ 	margin-bottom: 10px;
+ }
+
+.block-sheet  {
+        margin: 0% 5% 1% 5%;
+}
+
+.block-sheet   .button {
+	margin-bottom: 1px;
+
+	background-color: #59627C;
+    color: orange;
+    height: 56px;
+
+}
+
+.button-primary-ef .button-triangle {
+    border-color: transparent transparent #444C63 transparent;
+}
+ 
+.button-primary-ef .button-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 80px 300px 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+ 
+}
+
+.button-primary-ef .icon-button{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 35px;
+    z-index: 999;
+    color: #999;
+}
+ 
+ 
+.button-primary-ef > p {
+    left: 100px;
+    position: fixed;
+    top: -4px;
+    color: #ddd;
+
+ 
+}
+ 
+.button-primary-ef .icon-arrow{
+
+	position: fixed;
+
+	top: 10px;
+
+	right: 10px;
+
+	font-size: 35px;
+
+	color: orange;
+} 
+.block.block-carousel {
+	 margin: 15px 0px;	
+
+}
+
+.block.block-popup {
+
+    margin: 15px 0px;
+
+}
+.sheet-modal {
+    width: 92%;
+     margin-left: 4%;
+}  
+
+.sheet-modal .whoweare {
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.sheet-modal  .toolbar-inner {
+    background-color: #4F5A7A;
+}
+
+.sheet-modal  .sheet-modal-inner {
+    background-color: #DDD;
+   font-size: 13px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+}
+
+.sheet-modal  .toolbar-inner .right a{
+    color: orange;
+} 
+
+.sheet-modal  .toolbar-inner .left {
+    margin: 10px 0px 0px 5%;
+
+    color: orange;
+
+    font-size: 17px;
+}
+
+
+
+ .sheet-modal .sheet-modal-inner .block-sheet{
+    margin-top: 4%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: justify;
+}
+
+
+.sheet-modal .sheet-modal-inner  ol {
+    counter-reset: item;
+}
+.sheet-modal .sheet-modal-inner ol li { display: block }
+
+.sheet-modal .sheet-modal-inner ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    font-weight: bold;
+}
+ 
+.sheet-modal .sheet-modal-inner li {
+  
+    text-align: justify;
+    margin-left: -20px;
+
+}
+
+.sheet-modal.whoarewe.modal-in {
+    margin-bottom: 74%;
+}
+
+.sheet-modal.howitworks.modal-in {
+
+    
+    margin-bottom: 30%;
+    height: 300px;
+}
+
+.sheet-modal.satisfiedorrefunded.modal-in {
+
+    margin-bottom: 46%;
+    height: 420px;
+}
+
+.sheet-modal.ourmarketingsupports.modal-in {
+
+    margin-bottom: 31%;
+    height: 210px;  
+}
+
+.swiper-container .swiper-wrapper  img {
+    width: 95%;
+}
+

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ff9800">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>My App</title>
+
+  <link rel="stylesheet" href="framework/dist/css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+ 
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+
+  
+</head>
+<body class="" style=" ">
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-cover  ">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner"  style="background-color:  #F9A53A">
+              <div class="title">Menu</div>
+              <i class="icon f7-icons ios-only icon-ios-fill">menu</i>
+            <i class="icon material-icons md-only">menu</i>
+            </div>
+          </div>
+          <div class="page-content"  style="background-color:  #4F5A7A; ">
+            <div class="block-button-menu">
+                <a href="/home/"><button class="col button button-fill  "   style="background-color: orange; color: #4F5A7A;" >Home</button></a> 
+                <a href="/cars/"><button class="col button button-fill  "   style="background-color: orange; color: #4F5A7A;" >Cars</button></a> 
+                <a href="/props/"><button class="col button button-fill  "   style="background-color: orange; color: #4F5A7A;" >Props</button></a> 
+                <a href="/deals/"><button class="col button button-fill  "   style="background-color: orange; color: #4F5A7A;" >Deals</button></a> 
+               <a href="/pricing/"><button class="col button button-fill   " style="background-color: orange; color: #4F5A7A;" >Pricing</button></a> 
+               <a href="/contact/"><button class="col button button-fill   " style="background-color: orange; color: #4F5A7A;" >Contact</button></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-cover   ">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner"  style="background-color:  #F9A53A">
+              <div class="title text-center">Profil</div>
+            </div>
+          </div>
+          <div class="page-content" style="background-color:  #2F3545;color: white;">
+            <div class="block-button-profil">
+                <a href="/login/"><button class="col button button-fill  "   style="background-color: orange; color: #4F5A7A;" >Login</button></a> 
+               <a href="/signup/"><button class="col button button-fill   " style="background-color: orange; color: #4F5A7A;" >Sign up</button></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs ios-edges   "  >
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar tabbar-labels toolbar-bottom-md">
+        <div class="toolbar-inner"  style="background-color: #444C63;">
+          <a href="#view-home" class="tab-link tab-link-active " style="  color:#F9A53A">
+            <i class="icon f7-icons ios-only">apps</i>
+
+            <i class="icon f7-icons ios-only icon-ios-fill">apps</i>
+            <i class="icon material-icons md-only">apps</i>
+            <span class="tabbar-label">Home</span>
+          </a>
+
+           <a href="#view-cars" class="tab-link   " style="  color:#F9A53A">
+            <i class="icon f7-icons ios-only">directions_car</i>
+
+            <i class="icon f7-icons ios-only icon-ios-fill">directions_car</i>
+            <i class="icon material-icons md-only">directions_car</i>
+            <span class="tabbar-label">Cars</span>
+          </a>
+
+          <a href="#view-prop" class="tab-link  " style="  color:#F9A53A">
+            <i class="icon f7-icons ios-only">home</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">home</i>
+            <i class="icon material-icons md-only">home</i>
+            <span class="tabbar-label">Props</span>
+          </a>
+          <a href="#view-deals" class="tab-link " style="  color:#F9A53A">
+
+            <i class="icon f7-icons ios-only">thumb_up</i>
+            <i class="icon f7-icons ios-only icon-ios-fill">thumb_up</i>
+            <i class="icon material-icons md-only">thumb_up</i>
+            <span class="tabbar-label">Deals</span>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar" style="background-color: #444C63">
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons ios-only">more_vert</i>
+                  <i class="icon material-icons md-only">more_vert</i>
+                </a>
+              </div>
+               <!-- <img src="img/foxndeals.png" alt="" style="width: 200px; height: 30px; margin-left: 6%; ">  -->
+             
+
+              <div class="right">
+                <a href="#" class="link icon-only panel-open" data-panel="right">
+                  <i class="icon f7-icons ios-only">person</i>
+                  <i class="icon material-icons md-only">person</i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content" style="background-color: lightgray">
+            <img src="img/foxndeals.png" alt="" style="width: 80%; height: 50px; margin: 2% 0 0 10%; "> 
+ 
+
+            <div class="swiper-container" style="margin-left: 5%;">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/350x200.png"  alt=""></div>
+                <div class="swiper-slide"><img src="img/300x200_2.png"  alt=""></div>
+                <div class="swiper-slide"><img src="img/300x200_3.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/300x200_4.png" alt=""></div>
+              </div>
+            </div>
+       
+ 
+             <div class="  block-sheet text-center">
+      
+               <!-- Open Popup -->
+               <!-- class=" button link popup-open button-primary-ef" href="#" data-popup=".popup-whoarewe" -->
+                <button  class="button link sheet-open button-primary-ef" href="#" data-sheet=".whoarewe">
+                  <i class="material-icons icon-button">supervisor_account</i>
+                  <p>WHO ARE WE ?</p> 
+                    <i class="material-icons icon-arrow">keyboard_arrow_up</i>
+                  <div class="button-triangle"></div>       
+                </button> 
+
+                <button class="button   link sheet-open button-primary-ef" href="#" data-sheet=".howitworks">
+                  <i class="material-icons icon-button">settings</i>
+                  <p>HOW IT WORKS ?</p> 
+                   <i class="material-icons icon-arrow">keyboard_arrow_up</i>
+                <div class="button-triangle"></div>
+                </button> 
+
+                <button class="button   link sheet-open button-primary-ef" href="#" data-sheet=".satisfiedorrefunded">
+                  <i class="material-icons icon-button">thumb_up</i>
+                  <p>SATISFIED OR REFUNDED</p> 
+                  <i class="material-icons icon-arrow">keyboard_arrow_up</i>
+                <div class="button-triangle"></div>
+                 </button> 
+
+                <button class="button   link sheet-open button-primary-ef" href="#" data-sheet=".ourmarketingsupports">
+                  <i class="material-icons icon-button">donut_large</i>
+                  <p>OUR MARKETING SUPPORTS</p> 
+                  <i class="material-icons icon-arrow">keyboard_arrow_up</i>
+                <div class="button-triangle"></div></button> 
+             </div>
+    
+           
+           <div class="sheet-modal whoarewe">
+             <div class="toolbar">
+               <div class="toolbar-inner" style="">
+                 <div class="left">
+                  <p style=" ">WHO ARE WE ?</p>
+                 </div>
+                 <div class="right"><a class="link sheet-close" href="#"><i class="material-icons" style="color:#ddd">close</i></a>  </div>
+                </div>
+              </div>
+               <div class="sheet-modal-inner" style="">
+               <div class="block-sheet">
+                  
+                  <p style=" "> FOXNDEALS is a team of young IT specialists and web telemarketing specialists trained to boost the sales and promotion of individuals and business partners throughout Switzerland, thanks to our dynamic, practical and easy to manage website</p>
+                </div>
+               </div>
+           </div>
+
+            <div class="sheet-modal howitworks">
+             <div class="toolbar">
+               <div class="toolbar-inner" style="">
+                 <div class="left">
+                   <p style=" ">HOW IT WORKS ?</p>
+                 </div>
+                 <div class="right"><a class="link sheet-close" href="#"><i class="material-icons" style="color:#ddd">close</i></a>  </div>
+                </div>
+              </div>
+               <div class="sheet-modal-inner" style="">
+               <div class="block-sheet">
+                  
+                  <ol>
+                        <li><span>Choose and create your account for life</span></li>
+                        <li> <span> Your lifetime account is valid for the 3 categories offered by foxndeals (Auto-Immo-Deal)</span></li>
+                        <li> <span> Begin to insert your ads and receive your customers</span></li>
+                        <li> <span> For any suggestions or complaints a single address: info@foxndeals.com</span></li>
+                     
+                      </ol>
+                </div>
+               </div>
+           </div>
+
+            <div class="sheet-modal satisfiedorrefunded">
+             <div class="toolbar">
+               <div class="toolbar-inner" style="">
+                 <div class="left">
+                   <p style=" ">SATISFIED OR REFUNDED</p>
+                 </div>
+                 <div class="right"><a class="link sheet-close" href="#"><i class="material-icons" style="color:#ddd">close</i></a>  </div>
+                </div>
+              </div>
+               <div class="sheet-modal-inner" style="">
+               <div class="block-sheet">
+                  
+                  <ol>
+                        <li> Foxndeals is committed to maintain your online ads and active profile</li>
+                        <li>  We guarantee free of charge any modifications and updating of your announcements in case of need.</li>
+                        <li>  The quick sale of your item depends essentially on the quality of your item as well as its price.</li>
+                        <li>  Current supply and demand is an important factor in achieving a good deal.</li>
+                        <li>  Foxndeals is neither a seller nor an intermediary, no commission on the transactions carried out.</li>
+                      </ol>
+                </div>
+               </div>
+           </div>
+
+            <div class="sheet-modal ourmarketingsupports">
+             <div class="toolbar">
+               <div class="toolbar-inner" style="">
+                 <div class="left">
+                   <p style=" ">OUR MARKETING SUPPORTS</p>
+                 </div>
+                 <div class="right"><a class="link sheet-close" href="#"><i class="material-icons" style="color:#ddd">close</i></a>  </div>
+                </div>
+              </div>
+               <div class="sheet-modal-inner" style="">
+               <div class="block-sheet">
+                  
+                  <ol>
+                        <li>  E-mailing campaigns</li>
+                        <li>  Telemarketing campaigns</li>
+                        <li>  Advertising in newspapers</li>
+                        <li>  Multicasting your ads and social networks</li>
+                      </ol>
+                </div>
+               </div>
+           </div>
+
+
+            </div>
+        </div>
+      </div>
+
+
+     
+
+        <!-- cars View -->
+      <div id="view-cars" class="view tab">
+        <!-- cars page will be loaded here dynamically from /cars/ route -->
+      </div>
+
+      <!-- prop View -->
+      <div id="view-prop" class="view tab">
+        <!-- prop page will be loaded here dynamically from /prop/ route -->
+      </div>
+
+      <!-- deals View -->
+      <div id="view-deals" class="view tab">
+        <!-- deals page will be loaded here dynamically from /deals/ route -->
+      </div>
+    </div>
+ 
+
+  
+  </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#myCarousel").carousel({interval: 2500});
+    
+    // Enable Carousel Indicators
+    $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+    });
+    $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+    });
+    $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+    });
+    $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+    });
+});     
+
+
+</script>
+  <script src="framework/dist/js/framework7.min.js"></script>
+
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+  
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
